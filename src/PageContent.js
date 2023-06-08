@@ -48,6 +48,7 @@ function SheetTable(props) {
           <TableHead>
             <TableRow>
               <TableCell>Rate Sheet</TableCell>
+              <TableCell>File Type</TableCell>
               <TableCell>Date</TableCell>
             </TableRow>
           </TableHead>
@@ -57,6 +58,7 @@ function SheetTable(props) {
             .map((sheet) => (
               <TableRow>
                 <TableCell><a href={`${sheet.downloadLink}`}>{sheet.name}</a></TableCell>
+                <TableCell>{sheet.fileType}</TableCell>
                 <TableCell>{sheet.date}</TableCell>
               </TableRow>
             ))}
